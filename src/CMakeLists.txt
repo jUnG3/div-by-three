@@ -1,0 +1,5 @@
+set(TARGET ${CMAKE_PROJECT_NAME})
+
+add_executable(${TARGET})
+
+target_sources(${TARGET} PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/main.c>)
