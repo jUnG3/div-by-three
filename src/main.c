@@ -98,7 +98,11 @@ main()
             perror("read");
             return EXIT_FAILURE;
         }
-        for (u_int16_t i = 0; i < number_of_chars; ++i) {
+        if (number_of_bytes_read == 0) {
+            machine_finished = true;
+            break;
+        }
+        for (ssize_t i = 0; i < number_of_bytes_read; ++i) {
             if (buffer[i] == '\n') {
                 machine_finished = true;
                 break;
