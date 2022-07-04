@@ -103,7 +103,7 @@ main()
             break;
         }
         for (ssize_t i = 0; i < number_of_bytes_read; ++i) {
-            if (buffer[i] == '\n') {
+            if (buffer[i] == '\n' || buffer[i] == '\0') {
                 machine_finished = true;
                 break;
             }
