@@ -1,7 +1,7 @@
 # is-div-by-3
 
 Takes an input from the `stdin`, checks if the given input is dividable by `3`.
-Reads buffer until it hits `\n`.
+Reads buffer until it hits `\n` or `\0`.
 
 ## Build
 
